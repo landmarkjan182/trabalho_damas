@@ -1,13 +1,4 @@
-class Peca:
-    def __init__(self, cor, dama=False):
-        self.cor = cor
-        self.dama = dama
-
-    def __str__(self):
-        if self.cor == "azul":
-            return "🔵" if not self.dama else "💙"
-        else:
-            return "🔴" if not self.dama else "💖"
+from pecas import peca
 
 class Tabuleiro:
     def __init__(self):
@@ -21,11 +12,11 @@ class Tabuleiro:
         for i in range(3):
             for j in range(8):
                 if (i + j) % 2 == 1:
-                    tab[i][j] = Peca("vermelho")
+                    tab[i][j] = peca("vermelho")
         for i in range(5, 8):
             for j in range(8):
                 if (i + j) % 2 == 1:
-                    tab[i][j] = Peca("azul")
+                    tab[i][j] = peca("azul")
         return tab
 
     def mostrar(self):
