@@ -1,3 +1,6 @@
+# Gabriel Eiji Nakandakari Shinkae
+# mateus yuri koike
+# João Victor Brandão
 from pecas import peca
 
 class Tabuleiro:
